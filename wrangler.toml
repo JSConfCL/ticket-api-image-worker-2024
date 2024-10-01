@@ -2,6 +2,7 @@
 name = "tickets-images-worker"
 main = "src/index.ts"
 compatibility_date = "2024-09-25"
+observability = { enabled = true }
 compatibility_flags = ["nodejs_compat"]
 kv_namespaces = [
     { binding = "TICKETS_QR_IMAGES", id = "aa45c255f6f441dda71e45b0c11f132a", preview_id = "b297786957b249dca99978fad2cf95cb" }
@@ -12,30 +13,22 @@ API_URL = "http://localhost:50123/graphql"
 APP_ENV = "localhost"
 TTL_EN_SEGUNDOS = 60
 
-[env.localhost]
-name = "tickets-images-worker-localhost"
+
+[env.staging]
+name = "tickets-images-worker-staging"
+observability = { enabled = true }
 kv_namespaces = [
     { binding = "TICKETS_QR_IMAGES", id = "aa45c255f6f441dda71e45b0c11f132a", preview_id = "b297786957b249dca99978fad2cf95cb" }
 ]
 
-[env.localhost.vars]
+[env.staging.vars]
 API_URL = "https://api.jsconf.dev/graphql"
-APP_ENV = "dev"
-TTL_EN_SEGUNDOS = 60
-
-[env.dev]
-name = "tickets-images-worker-dev"
-kv_namespaces = [
-    { binding = "TICKETS_QR_IMAGES", id = "aa45c255f6f441dda71e45b0c11f132a", preview_id = "b297786957b249dca99978fad2cf95cb" }
-]
-
-[env.dev.vars]
-API_URL = "https://api.jsconf.dev/graphql"
-APP_ENV =  "dev"
+APP_ENV =  "staging"
 TTL_EN_SEGUNDOS = 60
 
 [env.production]
 name = "tickets-images-worker-production"
+observability = { enabled = true }
 kv_namespaces = [
     { binding = "TICKETS_QR_IMAGES", id = "47adcdcd224842dca5b5c91bd51e3f90", preview_id = "47b219e92f9a4f68980f5f5c84cc7218" }
 ]
