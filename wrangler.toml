@@ -3,7 +3,6 @@ name = "tickets-images-worker"
 main = "src/index.ts"
 compatibility_date = "2024-09-25"
 compatibility_flags = ["nodejs_compat"]
-node_compat = true
 kv_namespaces = [
     { binding = "TICKETS_QR_IMAGES", id = "aa45c255f6f441dda71e45b0c11f132a", preview_id = "b297786957b249dca99978fad2cf95cb" }
 ]
