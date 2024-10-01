@@ -1,5 +1,5 @@
 #:schema node_modules/wrangler/config-schema.json
-name = "ticket-api-image-worker"
+name = "tickets-images-worker"
 main = "src/index.ts"
 compatibility_date = "2024-09-25"
 compatibility_flags = ["nodejs_compat"]
@@ -112,3 +112,8 @@ enabled = true
 # [[vectorize]]
 # binding = "MY_INDEX"
 # index_name = "my-index"
+
+[vars]
+API_URL = "https://api.jsconf.dev/graphql"
+APP_ENV =  "dev"
+TTL_EN_SEGUNDOS = 60
