@@ -34,8 +34,9 @@ export const template = ({
         fontWeight: 600,
         fontFamily: "Barlow",
         color: "white",
-        height: name.length >= 20 ? "28px" : "34px",
-        overflow: "hidden"
+        height: name.length >= 20 ? "24px" : "34px",
+        maxWidth: "90%",
+        textAlign: "center",
       }}>
         {name.slice(0, 40)}
       </div>
@@ -47,7 +48,10 @@ export const template = ({
         fontFamily: "Inconsolata",
         color: "#F0E040",
         height: "22px",
-        overflow: "hidden"
+        wordBreak: "break-all",
+        maxWidth: "95%",
+        margin: "0 auto",
+        textAlign: "center",
       }}>
         @{username}
       </div>       
