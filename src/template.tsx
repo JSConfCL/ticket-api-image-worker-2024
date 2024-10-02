@@ -53,7 +53,7 @@ export const template = ({
         margin: "0 auto",
         textAlign: "center",
       }}>
-        @{username}
+        &nbsp;
       </div>       
     </div>
   </div>
